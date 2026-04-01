@@ -4,6 +4,48 @@ from pathlib import Path
 from typing import Dict, List, Tuple
 
 import streamlit as st
+import streamlit as st
+
+# ---- HIGH CONTRAST STYLING ----
+st.markdown("""
+    <style>
+    body, .stApp {
+        background-color: #0e1117;
+        color: white;
+    }
+
+    /* Text input / textarea */
+    textarea, input {
+        background-color: #1e1e1e !important;
+        color: white !important;
+        border: 1px solid #555 !important;
+    }
+
+    /* Placeholder text */
+    textarea::placeholder {
+        color: #bbbbbb !important;
+    }
+
+    /* Buttons */
+    .stButton button {
+        background-color: #ff6b00;
+        color: white;
+        font-weight: bold;
+        border-radius: 8px;
+    }
+
+    /* Labels */
+    label {
+        color: white !important;
+        font-weight: bold;
+    }
+
+    /* Chat / markdown text */
+    .stMarkdown {
+        color: white !important;
+    }
+    </style>
+""", unsafe_allow_html=True)
 from PIL import Image
 
 BASE_DIR = Path('/mnt/data')
